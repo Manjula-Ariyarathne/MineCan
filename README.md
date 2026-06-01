@@ -64,6 +64,46 @@ output/Lat_{latitude}_Lon_{longitude}.png
 
 ---
 
+## Mining Polygon Patch Capture
+
+This repository can also download 750 x 750 Google Maps satellite patches centered on mining polygons from the global mining land-use dataset by Maus et al.:
+
+- Paper: [An update on global mining land use](https://www.nature.com/articles/s41597-022-01547-4)
+- Dataset DOI: [PANGAEA.942325](https://doi.pangaea.de/10.1594/PANGAEA.942325)
+- Direct dataset download: [allfiles.zip](https://download.pangaea.de/dataset/942325/allfiles.zip)
+
+After downloading and extracting the dataset, keep the folder in this repository as:
+
+```text
+Maus-etal_2022_V2_allfiles/
+```
+
+The main file used by `mining_image.py` is:
+
+```text
+Maus-etal_2022_V2_allfiles/global_mining_polygons_v2.gpkg
+```
+
+List Canadian mines and their polygon IDs:
+
+```bash
+python mining_image.py --list-all
+```
+
+Download one specific Canadian mining polygon patch:
+
+```bash
+python mining_image.py --fid 21636
+```
+
+The script filters polygons to Canada by default using `ISO3_CODE = CAN`, prints each polygon's `fid`, area, center coordinate, and bounding box, then saves downloaded patches under:
+
+```text
+output/mining_images/
+```
+
+---
+
 ## Dataset Access
 
 > **Note:** This dataset is associated with a paper currently under review at *Scientific Data*.
