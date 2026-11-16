@@ -106,11 +106,11 @@ output/mining_images/
 
 ## Benchmarks
 
-We evaluated **five segmentation models** and **three detection models** as baselines:
+We evaluated **seven segmentation models** and **five detection models** as baselines:
 
-- **Segmentation:** U-Net, UNet++, DeepLabV3+, SegFormer, PSPNet.
-  - Best result: **UNet++**, F1-score = 0.9273.
-- **Object Detection:** YOLOv5, YOLOv11, YOLOv12.
+- **Segmentation:** U-Net, UNet++, DeepLabV3+, SegFormer, PSPNet, DINOv2, SAM.
+  - Best result: **DINOv2**, F1-score = 0.9455.
+- **Object Detection:** YOLOv5, YOLOv11, YOLOv12, RT-DETR-X, RT-DETR-L.
   - Best result: **YOLOv11**, AP@50 = 0.877.
 
 ---
